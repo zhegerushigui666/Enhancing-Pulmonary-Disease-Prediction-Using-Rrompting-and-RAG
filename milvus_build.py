@@ -5,11 +5,11 @@ from pathlib import Path
 from pymilvus import connections, FieldSchema, CollectionSchema, DataType, Collection, utility
 
 # 设置模型保存路径
-model_save_path = Path("S:/models保存")
+model_save_path = Path("")
 
 # 加载训练集数据
 #train_data_path = r"C:\Users\Lenovo\Desktop\self-adaptive\traindata长庚.csv"
-train_data_path = r"C:\Users\Lenovo\Desktop\self-adaptive\traindata影像学特征.csv"
+train_data_path = r""
 train_data = pd.read_csv(train_data_path)
 
 # 加载模型和tokenizer
@@ -85,8 +85,8 @@ sparse_embedding_df = pd.DataFrame(sparse_embeddings)  # 将字典转换为DataF
 # 保存到新的CSV文件
 #embedding_df.to_csv("C:/Users/Lenovo/Desktop/traindata肺部四分类_向量化长庚.csv", index=False)
 #sparse_embedding_df.to_csv("C:/Users/Lenovo/Desktop/traindata肺部四分类_稀疏向量化长庚.csv", index=False)
-embedding_df.to_csv(r"C:\Users\Lenovo\Desktop\self-adaptive\traindata影像学特征1.csv", index=False)
-sparse_embedding_df.to_csv(r"C:\Users\Lenovo\Desktop\self-adaptive\traindata影像学特征2.csv", index=False)
+embedding_df.to_csv(r"", index=False)
+sparse_embedding_df.to_csv(r"", index=False)
 print("向量化完成，结果已保存到新的CSV文件中。")
 print(f"跳过的行数：{len(skipped_indices)}")
 
